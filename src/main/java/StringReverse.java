@@ -13,6 +13,22 @@ public class StringReverse {
      * @return the reverse of str.
      */
     public String reverse(String str){
-        return null;
+        if (str == null)
+            return null;
+        
+        int length = str.length();
+        StringBuilder reversed = new StringBuilder(length);
+        
+        for (int i = length - 1; i >= 0; i--) {
+            reversed.append(str.charAt(i));
+        }
+        
+        return reversed.toString();
+    }
+
+    public static void main(String[] args) {
+        StringReverse stringReverse = new StringReverse();
+        String str = "Hello, world!";
+        System.out.println("Reversed string: " + stringReverse.reverse(str));
     }
 }
